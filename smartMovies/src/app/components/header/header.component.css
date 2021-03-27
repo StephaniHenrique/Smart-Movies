@@ -1,0 +1,26 @@
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #131313;
+    transition: background-color 0.5s;
+    z-index: 9999;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    color: #fff;
+    font-family: "Roboto";
+}
+
+.logo {
+    cursor: pointer;
+    width: 60px;
+}
+
+strong {
+    cursor: pointer;
+}

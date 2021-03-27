@@ -1,0 +1,45 @@
+<div class="banner">
+    <h1>Bem-vindo a Smart Movies</h1>
+    <p> Aqui você encontra o melhor catalogo de filmes e séries</p>
+</div>
+<ul class="tabs" role="tablist">
+    <li>
+        <input type="radio" name="tabs" id="tab1" checked />
+        <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0">Filmes</label>
+        <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="description" aria-hidden="false">
+            <main class="page-content">
+                <div class="card" style=" background-image: url(https://image.tmdb.org/t/p/w500/{{movie.poster_path}});"
+                    *ngFor="let movie of movies">
+                    <div class="content">
+                        <h2 class="copy">{{movie.title}}</h2>
+                        <p class="copy">{{movie.overview}}</p>
+                        <button class="btn" (click)="showDetails(movie.id)">
+                            Ver mais
+                        </button>
+
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+    </li>
+
+    <li>
+        <input type="radio" name="tabs" id="tab2" />
+        <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">Séries</label>
+        <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
+            <main class="page-content">
+                <div class="card" style=" background-image: url(https://image.tmdb.org/t/p/w500/{{serie.poster_path}});"
+                    *ngFor="let serie of series">
+                    <div class="content">
+                        <h2 class="copy">{{serie.name}}</h2>
+                        <p class="copy">{{serie.overview}}</p>
+                        <button class="btn" (click)="showDetailsTV(serie.id)">Ver mais</button>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </li>
+</ul>

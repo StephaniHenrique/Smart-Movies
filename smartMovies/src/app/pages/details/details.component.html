@@ -1,0 +1,36 @@
+<section class="clearfix banner">
+    <div class="banner_content_wrapper">
+        <div class="poster">
+            <img src="https://image.tmdb.org/t/p/w500/{{details.poster_path}}" class="featured_image">
+
+        </div>
+        <div class="content">
+            <h2 class="title">{{details.title || details.name}}</h2>
+
+            <p class="description">{{details.overview}}</p>
+
+            <pre class="info"> {{details.runtime || details.episode_run_time}} min <span>|</span>
+                <p *ngFor="let genre of genres" >{{genre.name}}, </p>
+                <span>|</span> {{details.release_date || details.first_air_date}}
+            </pre>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="wrapper">
+
+        <h2>Veja também:</h2>
+
+        <br><br>
+
+        <div class="row" *ngFor="let similar of similares">
+            <div class="post">
+                <img src="https://image.tmdb.org/t/p/w500/{{similar.poster_path}}">
+                <h3 class="title">{{similar.title || similar.name}}</h3>
+                <p class="post_info">IMDb: {{similar.vote_average}} | {{similar.release_date || similar.first_air_date}}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>

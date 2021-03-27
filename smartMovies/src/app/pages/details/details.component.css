@@ -1,0 +1,161 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.wrapper {
+    width: 1440px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.banner {
+    background-color: teal;
+    width: 100%;
+    padding: 6.5em 0;
+    margin: 80px 0;
+}
+
+.banner .banner_content_wrapper {
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .poster {
+    width: 275px;
+    position: relative;
+    float: left;
+}
+.banner .poster .featured_image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+}
+
+.banner .content {
+    float: left;
+    width: 500px;
+    margin-left: 100px;
+}
+.banner .content .title {
+    display: inline;
+    font-size: 1.75em;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.banner .content .description {
+    color: #bbbebf;
+    font-size: 1em;
+    line-height: 2;
+    margin-top: 2em;
+}
+.banner .content .info {
+    display: flex;
+    color: #ffffff;
+    font-size: 0.8em;
+    font-weight: 400;
+    margin-top: 2em;
+}
+
+.banner .content .info span {
+    margin: 0 0.5em;
+}
+
+.row {
+    width: 100%;
+}
+.row .post {
+    width: 14%;
+    float: left;
+    margin-right: 2.5%;
+}
+.row .post img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.5em;
+}
+.row .post .title {
+    font-size: 1.25em;
+    margin: 1em 0 0 0;
+    color: #252529;
+}
+.row .post .post_info {
+    font-size: 0.75em;
+    color: #8b8b9f;
+    margin: 0.5em 0 1rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .banner {
+        padding: 3.5em 0;
+    }
+    .banner .poster {
+        width: 250px;
+    }
+
+    .banner .content {
+        margin-left: 50px;
+    }
+    .banner .content .title {
+        font-size: 1.5em;
+    }
+
+    .banner .content .description {
+        font-size: 0.9em;
+        line-height: 2;
+    }
+    .banner .content .info {
+        font-size: 0.7em;
+        margin-top: 2em;
+    }
+    .banner .content .info span {
+        margin: 0 0.25em;
+    }
+
+    .row .post {
+        width: 30.6%;
+        margin-right: 0 1.25% 2em 1.25%;
+    }
+    .row .post .title {
+        font-size: 1em;
+        margin: 0.5em 0 0 0;
+    }
+    .row .post .post_info {
+        font-size: 0.65em;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .banner .banner_content_wrapper {
+        display: block;
+    }
+    .banner .banner_content_wrapper .poster {
+        width: 250px;
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .banner .banner_content_wrapper .content {
+        width: 100%;
+        margin: 1em auto 0 auto;
+    }
+
+    .row .post {
+        width: 250px;
+        margin: 0 auto 2em auto;
+        float: none;
+    }
+}
