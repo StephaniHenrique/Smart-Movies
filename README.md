@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://github.com/StephaniHenrique/Smart-Movies/blob/main/smartMovies/src/assets/img/logo.png" width="150" />
-</p>
-
 <h1 align="center">
   Smart Movies
 </h1>
